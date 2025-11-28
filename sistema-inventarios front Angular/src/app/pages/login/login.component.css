@@ -1,0 +1,42 @@
+/* Contenedor a pantalla completa */
+.login-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #0066cc, #33aaff);
+  padding: 20px;
+}
+
+/* Tarjeta del login */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 35px;
+}
+
+h2 {
+  font-weight: bold;
+  color: #0066cc;
+}
+
+/* Botón */
+.btn-primary {
+  background-color: #0066cc;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #004c99;
+}
+
+/* Inputs */
+.form-control {
+  height: 45px;
+  border-radius: 10px;
+}

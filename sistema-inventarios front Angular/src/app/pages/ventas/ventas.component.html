@@ -1,0 +1,82 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2">
+      <i class="bi bi-shop"></i> Panel Principal
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu-navbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" routerLink="/home">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/productos">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/ventas">Ventas</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/reportes">Reportes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container-fluid mt-4">
+  <div class="row g-3">
+
+    <!-- Botón principal 100% -->
+    <div class="col-md-4 col-12" >
+      <button 
+        class="btn btn-gradient btn-red w-100 py-2 d-flex align-items-center justify-content-center gap-2 animate__animated animate__bounce"
+        (click)="verCarrito()">
+        <i class="bi bi-tags"></i> Comenzar
+      </button>
+    </div>
+
+    <!-- Botones adicionales -->
+    <div class="col-md-4 col-12">
+      <button class="btn btn-gradient btn-blue w-100 py-2 d-flex align-items-center justify-content-center gap-2 animate__animated animate__fadeInUp">
+        <i class="bi bi-box"></i> Productos
+      </button>
+    </div>
+
+    <div class="col-md-4 col-12">
+      <button class="btn btn-gradient btn-yellow w-100 py-2 d-flex align-items-center justify-content-center gap-2 animate__animated animate__fadeInUp">
+        <i class="bi bi-people"></i> Clientes
+      </button>
+    </div>
+
+     
+
+    
+
+  </div>
+</div>
+
+<!-- ANIMACIONES -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+.btn-gradient {
+  border-radius: 0.5rem;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.btn-blue { background: linear-gradient(135deg, #0d6efd, #6610f2); color: white; }
+.btn-yellow { background: linear-gradient(135deg, #ffc107, #ffdd57); color: white; }
+.btn-cyan { background: linear-gradient(135deg, #0dcaf0, #198754); color: white; }
+.btn-red { background: linear-gradient(135deg, #dc3545, #ff073a); color: white; }
+.btn-purple { background: linear-gradient(135deg, #6f42c1, #d63384); color: white; }
+</style>
+
+
+<!-- Contenido dinámico -->
+    <div class="col-12 animate__animated animate__fadeInLeft">
+      <router-outlet></router-outlet>
+    </div>

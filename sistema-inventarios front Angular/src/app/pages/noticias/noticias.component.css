@@ -1,0 +1,160 @@
+.ofertas-noticias {
+  background: linear-gradient(180deg, #f9f9f9 0%, #fff 100%);
+}
+
+.promo-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-gradient-green {
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  color: #fff;
+  border: none;
+}
+.btn-gradient-green:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.btn-gradient-blue {
+  background: linear-gradient(90deg, #2196f3, #1565c0);
+  color: #fff;
+  border: none;
+}
+.btn-gradient-blue:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+
+
+/* 💼 Card general */
+  .card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #1b1b1b, #101010);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  /* 🌃 Card Body oscuro y elegante */
+  .card-body {
+    background: linear-gradient(145deg, #111, #1a1a1a);
+    color: #dcdcdc;
+    border-radius: 0 0 18px 18px;
+    padding: 40px;
+    position: relative;
+  }
+
+  /* ✨ Efecto de brillo sutil en los bordes */
+  .card-body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0 0 18px 18px;
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0)
+    );
+    pointer-events: none;
+  }
+
+  /* 🏷️ Título destacado */
+  .card-body h4 {
+    color: #00ffae;
+    text-shadow: 0 0 10px rgba(0, 255, 174, 0.4);
+    font-weight: 700;
+  }
+
+  /* 📜 Texto y lista */
+  .card-body p {
+    color: #bdbdbd;
+    font-size: 1rem;
+  }
+
+  .card-body ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #cfcfcf;
+  }
+
+  /* 💚 Iconos con brillo */
+  .card-body i.text-success {
+    color: #00ffae !important;
+    text-shadow: 0 0 6px rgba(0, 255, 174, 0.6);
+  }
+
+  /* 💎 Botón elegante degradado */
+  .btn-gradient-green {
+    background: linear-gradient(90deg, #00ffae, #00c48c);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 10px 25px;
+    box-shadow: 0 4px 15px rgba(0, 255, 174, 0.3);
+  }
+
+  .btn-gradient-green:hover {
+    background: linear-gradient(90deg, #00c48c, #00a773);
+    box-shadow: 0 6px 25px rgba(0, 255, 174, 0.5);
+    transform: translateY(-2px);
+  }
+  /* estilos pequenas ofertas  */
+ 
+  /* 🎨 Estilo general para las promos */
+  .promo-card {
+    background: rgba(0, 0, 0, 0.75);
+    color: #f1f1f1;
+    border-radius: 1rem;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    height: 100%;
+  }
+
+  .promo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 255, 128, 0.2);
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  /* ✨ Iconos */
+  .promo-card i {
+    color: #00e676;
+    text-shadow: 0 0 10px rgba(0, 255, 128, 0.6);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .promo-card:hover i {
+    transform: scale(1.15);
+    text-shadow: 0 0 15px rgba(0, 255, 128, 0.9);
+  }
+
+  /* 🧾 Títulos */
+  .promo-card h5 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  /* 💬 Texto */
+  .promo-card p {
+    color: #d1d1d1;
+    font-size: 0.95rem;
+  }
+
+  /* 📱 Responsivo */
+  @media (max-width: 768px) {
+    .promo-card {
+      margin-bottom: 1rem;
+    }
+  }
+

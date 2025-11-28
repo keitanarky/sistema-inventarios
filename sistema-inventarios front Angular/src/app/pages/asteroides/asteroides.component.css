@@ -1,0 +1,22 @@
+.game-container {
+  text-align: center;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+canvas {
+  background: black;
+  display: block;
+  margin: auto;
+  border: 2px solid #fff;
+}
+
+.info {
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}

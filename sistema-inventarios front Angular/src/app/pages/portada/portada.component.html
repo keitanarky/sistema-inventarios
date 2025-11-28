@@ -1,0 +1,89 @@
+
+
+<!-- CONTENEDOR PRINCIPAL CENTRADO (máximo 950px de ancho) -->
+<div class="container-fluid mt-4">
+  <div class="mx-auto" style="max-width: 950px; text-align: center;">
+    <h2 class="display-5 fw-bold mb-4 animate__animated animate__fadeInDown">🛒 Panel de Control de Tienda</h2>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <button (click)="irANuevoCliente()" class="btn btn-gradient-primary animate__animated animate__pulse animate__infinite">
+        <i class="bi bi-cart-plus me-2"></i> Nuevo Cliente
+      </button>
+
+      <button (click)="irANoticias()" class="btn btn-gradient-info animate__animated animate__fadeInUp">
+        <i class="bi bi-newspaper me-2"></i> Noticias
+      </button>
+
+      <button (click)="irAJuegos()" class="btn btn-gradient-danger animate__animated animate__fadeInUp animate__delay-1s">
+        <i class="bi bi-controller me-2"></i> Juegos
+      </button>
+
+      <button (click)="irAExistencias()" class="btn btn-gradient-warning animate__animated animate__fadeInUp animate__delay-2s">
+        <i class="bi bi-box-seam me-2"></i> Ver existencias
+      </button>
+    </div>
+
+    <!-- ESPACIO PARA EL ROUTER -->
+    <div class="mt-5 animate__animated animate__fadeIn">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<!-- ESTILOS GRADIENTES Y ANIMACIONES -->
+<style>
+  .btn-gradient-primary {
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: white;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .btn-gradient-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(13,110,253,0.4);
+  }
+
+  .btn-gradient-info {
+    background: linear-gradient(135deg, #0dcaf0, #198754);
+    color: white;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .btn-gradient-info:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(13,202,240,0.4);
+  }
+
+  .btn-gradient-danger {
+    background: linear-gradient(135deg, #dc3545, #fd7e14);
+    color: white;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .btn-gradient-danger:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(220,53,69,0.4);
+  }
+
+  .btn-gradient-warning {
+    background: linear-gradient(135deg, #ffc107, #fd7e14);
+    color: white;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .btn-gradient-warning:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255,193,7,0.4);
+  }
+</style>
+
+<!-- ANIMACIONES -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>

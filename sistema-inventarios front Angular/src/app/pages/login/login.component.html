@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh; padding: 20px;">
+
+  <div class="login-card shadow-lg p-5 bg-white rounded-4 animate-fade-in">
+
+    <!-- Encabezado -->
+    <h2 class="fw-bold text-center mb-1 text-primary">🔐 Iniciar Sesión</h2>
+    <p class="text-center text-secondary mb-4">Bienvenido, ingresa tus credenciales</p>
+
+    <!-- Formulario -->
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm" novalidate>
+
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        class="form-control mb-3"
+        [(ngModel)]="usuario"
+        required
+        placeholder="Ingresa tu usuario"
+      />
+
+      <input
+        type="password"
+        id="password"
+        name="password"
+        class="form-control mb-4"
+        [(ngModel)]="password"
+        required
+        placeholder="Ingresa tu contraseña"
+      />
+
+      <button type="submit" class="btn btn-primary w-100 btn-lg fw-bold rounded-3 mt-2">
+        Ingresar
+      </button>
+
+    </form>
+
+    <!-- Footer -->
+    <div class="mt-4 text-center text-secondary small">
+      &copy; 2025 Sistema Inventarios | <span class="text-primary fw-semibold">v1.0</span>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .login-card {
+    width: 450px;
+    max-width: 95%;
+  }
+  .animate-fade-in {
+    animation: fadeIn .6s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

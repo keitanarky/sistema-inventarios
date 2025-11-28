@@ -1,0 +1,24 @@
+/* Search */
+.search-bar input {
+  border-radius: 6px;
+  border: 1px solid #d4d4d4;
+}
+
+/* Table inputs */
+.cantidad-input {
+  width: 80px;
+  margin: auto;
+}
+
+/* Total box style */
+.total-box {
+  width: 240px;
+  background: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+}
+
+/* Clean hover actions */
+table tbody tr:hover {
+  background-color: #eef4ff;
+  cursor: default;
+}

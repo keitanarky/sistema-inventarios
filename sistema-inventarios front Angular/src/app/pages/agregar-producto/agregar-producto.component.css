@@ -1,0 +1,53 @@
+/* Tarjeta general */
+.form-card {
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.card-header {
+  background: #007bff;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Inputs y textarea */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 0.6rem 1rem;
+  transition: all 0.3s;
+}
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-outline-secondary {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.btn-outline-secondary:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Errores */
+.text-danger {
+  font-size: 0.85rem;
+}

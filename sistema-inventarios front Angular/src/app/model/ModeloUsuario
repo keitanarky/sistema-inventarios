@@ -1,0 +1,31 @@
+
+
+export class Usuario {
+cantidad: any;
+  patchValue(data: Usuario) {
+    throw new Error('Method not implemented.');
+  }
+  invalid: any;
+  reset() {
+    throw new Error('Method not implemented.');
+  }
+    idEmpleado? :number;
+    usuario:string;
+    password:string;
+    
+
+
+  constructor(
+    idEmpleado? :number=0,
+    usuario:string='',
+    password:string=''
+
+
+  ) {
+    this.idEmpleado=0;
+    this.usuario='';
+    this.password='';
+  }
+}
+
+

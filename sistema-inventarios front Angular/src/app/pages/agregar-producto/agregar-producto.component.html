@@ -1,0 +1,57 @@
+<div class="container mt-5">
+  <div class="card form-card shadow-lg border-0">
+    <div class="card-header text-center">
+      <h2>Agregar Producto</h2>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="productoForm" (ngSubmit)="onSubmit()">
+
+     
+
+        <!-- Descripción -->
+        <div class="mb-3">
+          <label for="descripcion" class="form-label">Descripción</label>
+          <textarea
+          [(ngModel)]="producto.descripcion"
+          id="descripcion" name="descripcion" formControlName="descripcion" class="form-control" rows="3" placeholder="Ingrese una descripción"></textarea>
+          <div *ngIf="submitted && f['descripcion'].errors" class="text-danger mt-1 small">
+            <div *ngIf="f['descripcion'].errors['required']">La descripción es obligatoria.</div>
+          </div>
+        </div>
+
+        <!-- Precio y Cantidad -->
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="precio" class="form-label">Precio</label>
+            <input 
+            [(ngModel)]="producto.precio"
+            type="number" id="precio" name="precio" formControlName="precio" class="form-control" placeholder="0.00">
+            <div *ngIf="submitted && f['precio'].errors" class="text-danger mt-1 small">
+              <div *ngIf="f['precio'].errors['required']">El precio es obligatorio.</div>
+              <div *ngIf="f['precio'].errors['min']">El precio no puede ser negativo.</div>
+            </div>
+          </div>
+
+          <!-- cantidad -->
+          <div class="col-md-6">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input
+            [(ngModel)]="producto.existencia"
+            type="number" id="cantidad" name="cantidad" formControlName="cantidad" class="form-control" placeholder="0">
+            <div *ngIf="submitted && f['cantidad'].errors" class="text-danger mt-1 small">
+              <div *ngIf="f['cantidad'].errors['required']">La cantidad es obligatoria.</div>
+              <div *ngIf="f['cantidad'].errors['min']">La cantidad no puede ser negativa.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="d-flex justify-content-center gap-3">
+          <button type="submit" class="btn btn-primary btn-lg">Agregar Producto</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg" (click)="onReset()">Limpiar</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

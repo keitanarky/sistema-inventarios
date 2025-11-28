@@ -1,0 +1,106 @@
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm py-3 mt-4">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="">
+      <i class="bi bi-shop me-2"></i> 
+    </a>
+
+    <form class="d-flex ms-auto me-3 search-bar">
+      <input 
+        type="search" 
+        class="form-control"
+        placeholder="Buscar productos..."
+      />
+      <button class="btn btn-light ms-2">
+        <i class="bi bi-search"></i> Agregar
+      </button>
+    </form>
+
+    <button class="btn btn-outline-light">
+      <i class="bi bi-cart-plus me-2"></i> Buscar
+    </button>
+  </div>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container py-4">
+  <div class="card border-0 shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">
+        <i class="bi bi-cart4 me-2"></i> Carrito de Compras
+      </h5>
+    </div>
+
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped align-middle text-center">
+          <thead class="table-dark">
+            <tr>
+              <th>Código</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Subtotal</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of carrito; let i = index">
+              <td>{{ item.codigo }}</td>
+              <td>{{ item.nombre }}</td>
+              <td>
+                <input 
+                  type="number" 
+                  [(ngModel)]="item.cantidad" 
+                  (change)="actualizarTotal()" 
+                  min="1"
+                  class="form-control text-center cantidad-input"
+                />
+              </td>
+              <td>${{ item.precio | number:'1.2-2' }}</td>
+              <td>${{ (item.precio * item.cantidad) | number:'1.2-2' }}</td>
+              <td>
+                <button 
+                  class="btn btn-danger btn-sm"
+                  (click)="eliminarProducto(i)"
+                >Eliminar
+                  <i class="bi bi-trash3"></i>
+                </button>
+              </td>
+            </tr>
+
+            <tr *ngIf="carrito.length === 0">
+              <td colspan="6" class="text-muted py-3">
+                <i class="bi bi-bag-dash me-2"></i>No hay productos
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    <!-- TOTAL COMPLETO -->
+<div class="d-flex justify-content-end mt-4">
+  <div class="total-box p-4 rounded shadow-sm bg-white" style="min-width:280px;">
+    
+    <!-- Total -->
+    <h5 class="fw-bold mb-1"><i class="bi bi-receipt me-1"></i> Total:</h5>
+    <h3 class="text-success fw-bold mb-3">$ {{ total | number:'1.2-2' }}</h3>
+
+    <!-- Paga con -->
+    <label class="fw-bold">Paga con:</label>
+    <input type="number" class="form-control text-center mb-3" [(ngModel)]="pagaCon" (input)="calcularCambio()" min="0" placeholder="Monto recibido">
+
+    <!-- Cambio -->
+    <label class="fw-bold">Cambio:</label>
+    <h3 class="text-primary fw-bold mb-4">$ {{ cambio | number:'1.2-2' }}</h3>
+
+    <!-- Botón cobrar -->
+    <button class="btn btn-success w-100" (click)="finalizarCompra()">
+      <i class="bi bi-credit-card me-1"></i> Cobrar
+    </button>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
